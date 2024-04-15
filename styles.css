@@ -1,0 +1,778 @@
+/*reset*/
+*{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+/****police family***/
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*****Styles bar de navigation*****/
+
+     /********logo******/
+
+label{
+  margin: 0px;
+  padding: 0px;
+}
+
+     /******ancre*****/
+  
+a{
+  color:#ffffff;
+}
+     /******styles class parent******/
+
+.nav-bar{
+  background-color: #0082e6;
+  box-shadow: 1px 1px 4px 0 rgba(239, 242, 243, 0.795);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+
+    /********styles class enfant******/
+
+.nav-bar ul{
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav-bar ul a{
+  display: block;
+  padding: 20px;
+  border-right: 1px solid #aaaaaa;
+}
+
+.nav-bar ul a:hover{
+  background-color: #1b9bff;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+    /********styles logo******/
+
+.nav-bar .logo{
+  float: left;
+  display: block;
+  font-size: 30px;
+  font-style: italic;
+  padding: 10px 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+   /***************Styles Menu Responsive**************/
+       
+       /****styles class enfant******/
+
+.nav-bar .menu{
+  clear: both;
+  max-height: 0px;
+  transition: max-hight .2s ease-out;
+}
+
+       /*****styles menu icon*****/
+
+.nav-bar .menu-icon{
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+   /*****styles crèation des 3 tirets*****/
+
+.nav-bar .menu-icon .nav-icon{
+  background: #ffffff;
+  display: block;
+  height: 2px;
+  width: 25px;
+  position: relative;
+  transition: background .2s ease-out;
+}
+
+.nav-bar .menu-icon .nav-icon:before{
+  background: #ffffff;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  top: 8px;
+}
+
+.nav-bar .menu-icon .nav-icon:after{
+  background: #ffffff;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  top: -8px;
+}
+
+   /*****styles bouton*****/
+
+.nav-bar .menu-btn{
+  display: none;
+}
+
+.nav-bar .menu-btn:checked ~ .menu{
+  max-height: 400px;
+}
+
+   /*****styles bouton du 3 tirets en "X"*****/
+
+.nav-bar .menu-btn:checked ~ .menu-icon .nav-icon{
+   background: transparent;
+}
+
+.nav-bar .menu-btn:checked ~ .menu-icon .nav-icon:before{
+  transform: rotate(-45deg);
+  top: 0px;
+}
+
+.nav-bar .menu-btn:checked ~ .menu-icon .nav-icon:after{
+  transform: rotate(45deg);
+  top: 0px;
+}
+
+/***styles bar de navigation responsive***/
+
+@media (min-width: 50em){
+  
+  .nav-bar li{
+      float: left;    
+  }
+  .nav-bar li a{
+      padding: 20px 30px;
+  }
+  .nav-bar .menu{
+      clear: none;
+      float: right;
+      max-height: none;
+  }
+  .nav-bar .menu-icon{
+      display: none;
+  }
+  
+}
+
+/*******************Header********************/
+
+
+header .row{
+  min-height: 100vh;
+  background-image: url(img/bandeau.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  align-items: center;
+  color: #ffffff;
+  clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 100%, 80% 90%, 51% 90%, 20% 90%, 0 100%, 0% 35%, 0 0);
+}
+
+header .contact{
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 125vh;
+  display: flex;
+  align-items: center;
+} 
+
+header h3{
+  color: #ffffffc0;
+}
+
+header h4{
+  color: #ffffffc0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+header p{
+  color: #ffffffc0;
+  text-align: center;
+  font-size: 24px;
+}
+
+header a:hover{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header .slogan{
+  display: flex;
+  min-height: 110vh;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 80px;
+  
+}
+
+/****Section Header responsive****/
+
+@media (max-width: 768px) { 
+  header .slogan{
+      display: none;
+  }
+}
+header h2{
+  color: rgba(81, 83, 83, 0.911);
+}
+
+.nomentreprise{
+  color: #03345aa8;
+}
+
+  /****Button "Devi en ligne"*****/
+
+.btn-devis{
+  background-color: #052c49;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 10px 30px;
+  margin-top: 20px;
+  margin-left: 60px;
+  margin-right: 30px;
+  cursor: pointer;
+  width: 80%;
+  text-align: center;
+}
+  
+/*******Style button hover******/
+  
+.btn-devis:hover{
+  background-color: rgba(10, 37, 77, 0.829);
+}
+  
+.btn-devis a:hover{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+
+/***********Nos Service********/
+
+
+h1 {
+  background: #333;
+  color: rgba(202, 214, 214, 0.856);
+  text-align: center;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  margin: 0 0 5% 0;
+  padding: 0.5em;
+  margin: 0 0 5% 0;
+}
+
+h5{
+    text-align: center;
+    color: rgba(81, 83, 83, 0.911);
+}
+
+
+/******Style cardBox******/
+
+.cardBox {
+  float: left;
+  font-size: 14px;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 15%;
+  margin-left: 20px;
+}
+
+.cardBox:hover .card {
+  transform: rotateY( 180deg);
+}
+
+.card {
+  background: rgb(136, 220, 231);
+  cursor: default;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+
+.card p {
+  margin-bottom: 1.8em;
+}
+
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: rgba(78, 76, 76, 0.904);
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.card .front strong {
+  font-size: 80px;
+}
+
+.card .back {
+  transform: rotateY( 180deg);
+}
+
+.cardBox.cardBox:nth-child(1) .card .back {
+  background: #79c0f0;
+}
+
+.cardBox:nth-child(2) .card .back {
+  background: #79c0f0;
+}
+
+.cardBox:nth-child(3) .card .back {
+  background: #79c0f0;
+}
+
+.cardBox:nth-child(4) .card .back {
+  background: #79c0f0;
+}
+
+.cardBox:nth-child(5) .card .back {
+  background: #79c0f0;
+}
+
+.cardBox:nth-child(6) .card .back {
+  background: #79c0f0;
+}
+
+.cardBox:nth-child(2) .card {
+  -webkit-animation: giro 1.5s 1;
+  animation: giro 1.5s 1;
+}
+
+.cardBox:nth-child(3) .card {
+  -webkit-animation: giro 2s 1;
+  animation: giro 2s 1;
+}
+
+.cardBox:nth-child(4) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}
+
+.cardBox:nth-child(5) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}
+
+.cardBox:nth-child(6) .card {
+  -webkit-animation: giro 2.5s 1;
+  animation: giro 2.5s 1;
+}
+
+@-webkit-keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+@keyframes giro {
+  from {
+    transform: rotateY( 180deg);
+  }
+  to {
+    transform: rotateY( 0deg);
+  }
+}
+
+
+
+/**********Section  "Nos service"  -  responsive*******/
+
+
+@media screen and (max-width: 1250px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 30%;
+  }
+  .card {
+    height: 285px;
+  }
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 30%;
+  }
+  .card {
+    height: 285px;
+  }
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cardBox {
+    margin-left: 6%;
+    margin-top: 3%;
+    width: 40%;
+  }
+  .card {
+    height: 285px;
+  }
+  .cardBox:last-child {
+    margin-bottom: 3%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cardBox {
+    width: 90%;
+  }
+  .card {
+    height: 260px;
+  }
+}
+
+
+/**********A propos***********/
+
+      /****div parent******/
+
+div .propos{
+  min-height: 100vh;
+  background-image: url(img/propos.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  border-radius: 30px;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+  /*******colonne gauche******/
+
+ 
+div .col-gauche{
+  background-color: #42a4f5e0;
+  min-height: 110vh;
+  min-width: 75vh;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  left: -15px;
+  border-radius: 30px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+div .col-gauche h4{
+  margin-top: 20px;
+  color: rgb(62, 63, 63);
+}
+
+div .col-gauche h2{
+  margin-top: 40px;
+  text-align: center;
+  color: rgb(62, 63, 63);
+}
+
+div .col-gauche p{
+  margin-top: 50px;
+  text-align: center;
+  margin-right: 20px;
+  font-size: 20px;
+  color: rgb(62, 63, 63);
+}
+
+
+
+/**********Section Video*********/
+
+
+div .colonne-gauche{
+justify-content: center;
+padding-left: 30px;
+margin-top: 20px;
+}
+
+div .colonne-gauche h5{
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+div .colonne-gauche a:hover{
+color: #07518a;
+}
+
+div .colonne-gauche a{
+color: #000000;
+text-decoration: none;
+}
+
+div .video{
+  margin-left: 10px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+div .video h2{
+  color: rgba(81, 83, 83, 0.911);
+  text-align: center; 
+}
+
+div .video h4{
+  color: rgba(47, 48, 48, 0.911);
+}
+
+div .video p{
+  margin-bottom: 50px;
+  color: rgba(50, 51, 51, 0.911);
+}
+
+video{
+  width: 98%!important;
+  height: 85%!important;
+  border: 1px solid #000000;
+  margin-top: 60px;
+}
+
+@media (max-height: 750px){
+  .video-droit{
+    height: 100%;
+  }
+}
+
+
+/********Formulaire***********/
+
+   /****title et subtitle (h5)****/
+
+div .formulaire h1{
+  color: rgba(202, 214, 214, 0.856);
+  margin-top: 50px;
+  text-align: center;
+}
+
+div .formulaire h5{
+  margin-top: 50px;
+  text-align: center;
+  color: rgba(81, 83, 83, 0.911);
+}
+
+   /*style colonne gauche(md-4)*/
+
+div .gauche{
+  width: 20px;
+  border-right: 5px solid #0082e6e8;
+  background-color: #aaafb149;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  color: rgba(81, 83, 83, 0.911);
+}
+
+div .col-contact{
+  background-color: #aaafb149;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  text-align: center;
+  margin-left: 60px;
+  margin-right: 50px;  
+}
+
+div  h6{
+  margin-top: 70px;
+}
+  
+   /**********btn-phone******/
+
+
+div .btn-tell{
+  background-color: #052c49;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin: 40px 30px;
+  cursor: pointer;
+  width: 80%;
+}
+
+div .btn-tell:hover{
+  background-color: rgba(10, 37, 77, 0.829);
+}
+
+div .btn-tell a:hover{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+/*style colonne droit(md-8)*/
+
+  /***style form****/
+
+input[type=text], textarea{
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  color: rgba(81, 83, 83, 0.911);
+} 
+
+label {
+  color: rgba(81, 83, 83, 0.911);
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #8f998f;
+  padding: 10px 0px 10px 0px;
+  margin-top: 10px;
+  margin-left: 28.5%;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.911);
+  width: 60%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+input[type=submit]:hover {
+  background-color: #aeb1ae;
+  padding: 10px 0px 10px 0px;
+  margin-top: 10px;
+  color: rgba(73, 100, 100, 0.911);
+}
+
+input[type="checkbox"]{
+margin-left: 25px;
+}
+
+label[for="vehicle1"]{
+margin-left: 5px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+
+/********Fomulaire responsive*****/
+
+
+/* Effacer les flotteurs après les colonnes */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - lorsque l'écran mesure moins de 600 pixels de large, faites en sorte que les deux colonnes s'empilent l'une sur l'autre plutôt que l'une à côté de l'autre */
+
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+      margin-left: 0px;
+  }   
+}
+
+
+
+/************footer***************/
+
+footer{
+  display: block;
+} 
+
+.footer{
+  background-color: #0082e6;
+  margin-top: 120px;
+  padding: 20px 20px;
+  text-align: center;
+  color: #ffffffcc;
+  border-radius: 40px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/*****premiere colonne*****/
+
+div .footer-row{
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+hr{
+  border-width: 80%;
+  border: 5px solid #0bb0f1;
+  border-radius: 5px;
+}
+
+/*image logo*/
+.logo{
+  float: left;
+  padding-bottom: 5px;
+}
+
+
+/******* deusiemme colonne******/
+
+footer section{
+ margin-left: 20px;
+}
+  
+footer address{
+  text-align: right;
+  margin-top: 70px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+
+
+
+
+
+
+
+RewriteEnigine on
+RewriteCond %{REQUEST_FILENAME} !- f
+RewriteRule ^(.*)$index.php?url-$[QSA,L]
